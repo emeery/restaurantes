@@ -1,0 +1,8 @@
+.opcion {
+  background:salmon;
+  display: flex;
+  font-family: 'Roboto';
+  margin-bottom: 10px;
+  justify-content: space-between;
+  padding: 10px;
+}

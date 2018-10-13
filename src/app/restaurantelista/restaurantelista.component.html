@@ -1,0 +1,21 @@
+
+  <div id="app-restaurantelista">
+    <div *ngFor="let restaurante of restaurantes">
+      <div class="opcion bxshadow">
+        <div class="imagen">
+          <img src="../../assets/images/point.gif" />
+        </div>
+          <h3> {{restaurante.nombre}} </h3>
+        <div>
+          <p> {{restaurante.direccion}}</p>
+          <button 
+          (click)="verDetalleRestaurante()" 
+          [routerLink]="['restaurante', restaurante.id]" 
+          type="button"
+          class="btn btn-info">ver</button>
+          <button type="button" class="btn btn-light">editar</button>
+          <button type="button" class="btn btn-danger">X</button>
+        </div>
+      </div>
+    </div>
+  </div>

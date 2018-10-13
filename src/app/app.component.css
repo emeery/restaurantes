@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+#header {
+  background: darkslategray;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+header {
+  display: flex;
+  color: lightgoldenrodyellow;
+  font-family: 'Roboto';
+  font-size: 20px;
+  vertical-align: text-top;
+}
+header img {
+  margin: 20px;
+}
+header h2 {
+  margin-top: 30px;
+}
+.menu {
+  margin-top: 0%;
+}

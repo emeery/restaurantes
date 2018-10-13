@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+/*import css */
+.clearfix {
+  float: none;
+  clear: both;
+  text-decoration: none;
+  list-style: none;
+}
+
+.body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+#all {
+  background:  #34495e;
+}
+#content {
+  width: 70%;
+  min-height: 500px;
+  margin: 0 auto;
+  background: #fff;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: solid 1px lightgray;
+  border-radius: 10px;
+  box-shadow: 5px 8px lightseagreen;
+}
