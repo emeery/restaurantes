@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 #header {
-  background: darkslategray;
+  background: #d1f2eb;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 header {
   display: flex;
-  color: lightgoldenrodyellow;
+  color:  #2874a6;
   font-family: 'Roboto';
   font-size: 20px;
   vertical-align: text-top;

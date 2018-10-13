@@ -1,4 +1,14 @@
-<div class="opcion">
-  <h3>Detalle Restaurante {{parametro}} </h3>
-  <button (click)="getRestaurante()">get</button>
+<div *ngIf="restaurante" class="opcion boxshadow">  
+  <div routerLink="/" class="boton">
+    <i class="fas fa-angle-left fa-5x"></i>
+  </div>    
+  <div class="imagen">
+  <img src="../../assets/images/point.gif" />
+  </div>
+  <div class="descripcion">
+    <h3> {{restaurante.nombre}}</h3>
+    <p> Descripcion: {{restaurante.descripcion}}<br>
+    Direccion: {{restaurante.direccion}}</p>
+    
+  <div>
 </div>

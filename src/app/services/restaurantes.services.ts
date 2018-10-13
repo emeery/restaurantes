@@ -8,17 +8,19 @@ import 'rxjs/add/operator/catch';
 @Injectable()
 export class RestauranteServicio {
     private URL_API =
-    'http://localhost/phpMyAdmin/api-rest/restaurantes-api.php/restaurantes';
-    private URL_ID = 
-    'http://localhost/phpMyAdmin/api-rest/restaurantes-api.php/restaurante/';
+    'http://localhost/phpMyAdmin/api-rest/restaurantes-api.php/restaurantes'
+    
+    
     
     constructor(private _http: Http) {}
     getRestaurantes() {
       return this._http.get(this.URL_API)
-      .map(res => res.json() );
+      .map(res => res.json());
     }
-    getResturante(id: string) {
-      return this._http.get(this.URL_ID + id)
-      .map(res => res.json() );
-    }
+    getRestaurante(id: string){
+			return this._http.get("http://localhost/phpMyAdmin/api-rest/restaurantes-api.php/restaurante/"+id)
+							.map(res => res.json());
+		
+		
+	}
 }
