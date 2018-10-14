@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 .opcion {
-  background:salmon;
+  border-radius: 5px;
+  background: teal;
   display: flex;
   font-family: 'Roboto';
-  margin-bottom: 10px;
+  
   justify-content: space-between;
   padding: 10px;
+  margin: 2px;
 }
 .opcion h3 {
   color: lightgoldenrodyellow;
@@ -20,7 +22,7 @@
   width: 90%;
 }
 .opcion p {
-  color: brown;
+  color: #ecf0f1;
 }
 .opcion__titulo {
     color: white;
@@ -30,8 +32,19 @@
     word-break: break-all;
     margin-right: 2rem;
 }
+.boton {
+  background-color: purple;
+  border: none;
+  border-bottom: .3rem solid darken($purple, 10%);
+  color: whitesmoke;
+  padding: 10%;
+  width: 20%;
+}
 .bxshadow {
 -webkit-box-shadow: 0px 10px 5px -1px rgba(176,160,176,1);
 -moz-box-shadow: 0px 10px 5px -1px rgba(176,160,176,1);
 box-shadow: 0px 10px 5px -1px rgba(176,160,176,1);
+}
+.button {
+  border-bottom: .6rem solid darken($purpura, 10%);
 }

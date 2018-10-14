@@ -15,23 +15,20 @@ export class RestauranteListaComponent implements OnInit {
   constructor(private restauranteServicio: RestauranteServicio) {}
 
   ngOnInit() {
-
     this.restauranteServicio.getRestaurantes()
-      .subscribe( resultado => {
-
-        this.restaurantes = resultado.data;
-        },
+    .subscribe( resultado => {
+        this.restaurantes = resultado.data; },
         error => {
           this.unerror = <any>error;
           if (this.unerror !== null ) {
             console.log(this.unerror);
           }
         }
-      );
+    );
+    this.verDetalleRestaurante();
   }
   verDetalleRestaurante() {
-
-    console.log('ver informacion');
+    console.log('lista de restaurantes');
   }
 
 }

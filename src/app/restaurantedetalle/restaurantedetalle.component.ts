@@ -23,22 +23,15 @@ export class RestauranteDetalleComponent implements OnInit {
   }
   getRestaurante(){
 		this.route.params.forEach((params: Params) => {
-
 			let id = params["id"];
-			
-
 			this._restauranteServicio.getRestaurante(id)
-			.subscribe(
-				response => {
+			.subscribe( response => {
 						this.restaurante = response.data;
 						console.log(this.restaurante);
-				},
-				error => {
-					this.unerror = <any>error;
-					
-					if(this.unerror !== null){
+			}, error => {
+					this.unerror = <any> error;
+					if(this.unerror !== null) {
 						console.log(this.unerror);
-						
 					}
 			});
 		});

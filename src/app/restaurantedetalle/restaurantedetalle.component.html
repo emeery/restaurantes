@@ -7,8 +7,25 @@
   </div>
   <div class="descripcion">
     <h3> {{restaurante.nombre}}</h3>
-    <p> Descripcion: {{restaurante.descripcion}}<br>
-    Direccion: {{restaurante.direccion}}</p>
+    <p> 
+        Descripcion: {{restaurante.descripcion}}
+          <br>
+        Direccion: {{restaurante.direccion}}
+    </p>
+    <div [ngSwitch]="restaurante.precio">
+      <p *ngSwitchCase="'bajo'"> precio accesible -
+        <i class="fas fa-dollar-sign fa-2x"></i>
+      </p>
+      <p *ngSwitchCase="'regular'"> precio regular -
+        <i class="fas fa-dollar-sign fa-2x"></i>
+        <i class="fas fa-dollar-sign fa-2x"></i>
+      </p>
+      <p *ngSwitchCase="'alto'"> precio alto -
+        <i class="fas fa-dollar-sign fa-2x"></i>
+        <i class="fas fa-dollar-sign fa-2x"></i>
+        <i class="fas fa-dollar-sign fa-2x"></i>
+      </p>
+    <div>
     
   <div>
 </div>
