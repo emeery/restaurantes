@@ -1,6 +1,7 @@
 import { Routes, RouterModule } from '@angular/router';
-import {RestauranteListaComponent} from '../restaurantelista/restaurantelista.component';
-import {RestauranteDetalleComponent} from '../restaurantedetalle/restaurantedetalle.component';
+import {RestauranteListaComponent } from '../restaurantelista/restaurantelista.component';
+import {RestauranteDetalleComponent } from '../restaurantedetalle/restaurantedetalle.component';
+import {NoEncontradoComponent } from '../noencontrado/noencontrado.component';
 const routes: Routes = [
   {
     path: '',
@@ -14,6 +15,14 @@ const routes: Routes = [
   {
     path: 'restaurante/:id',
     component: RestauranteDetalleComponent,
+  },
+  {
+    path: '404',
+    component: NoEncontradoComponent,
+  },
+  {
+    path: '**', 
+    redirectTo: '404'
   }
 ];
 export const routing = RouterModule.forRoot(routes);

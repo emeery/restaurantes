@@ -1,0 +1,22 @@
+.opcion {
+  background: url("/assets/images/smile.gif");
+  background-size: 80%;
+  background-size: cover;
+  display: block;
+  overflow: none;
+  font-family: 'Roboto';
+  margin-bottom: 10px;
+  justify-content: space-evenly;
+  padding: 10px;
+  color: #fff; 
+  height: 27rem;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.opcion h2 {
+    text-align: center;
+}
+.fa-home {
+    cursor: pointer;
+    color: salmon;
+}

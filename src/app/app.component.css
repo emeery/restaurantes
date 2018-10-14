@@ -11,12 +11,12 @@ header {
   font-family: 'Roboto';
   font-size: 20px;
   vertical-align: text-top;
+  
 }
-header img {
-  margin: 20px;
-}
+
 header h2 {
   margin-top: 30px;
+  padding-left: 20px;
 }
 .menu {
   margin-top: 0%;

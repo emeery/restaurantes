@@ -7,7 +7,7 @@ import {routing} from './routes/app.routes';
 import { AppComponent } from './app.component';
 import { RestauranteListaComponent } from './restaurantelista/restaurantelista.component';
 import { RestauranteDetalleComponent } from './restaurantedetalle/restaurantedetalle.component';
-import { NoencontradoComponent } from './noencontrado/noencontrado.component';
+import { NoEncontradoComponent } from './noencontrado/noencontrado.component';
 
 
 @NgModule({
@@ -15,7 +15,7 @@ import { NoencontradoComponent } from './noencontrado/noencontrado.component';
     AppComponent,
     RestauranteListaComponent,
     RestauranteDetalleComponent,
-    NoencontradoComponent
+    NoEncontradoComponent
   ],
   imports: [
     BrowserModule,
