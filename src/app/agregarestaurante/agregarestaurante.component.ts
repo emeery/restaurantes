@@ -22,8 +22,8 @@ export class AgregaRestauranteComponent implements OnInit {
     this.restaurante = new Restaurante(0,"","","","null","bajo");
   }
   onSubmit() {
-    this._restauranteServicio.addRestaurante(this.restaurante)
-    .subscribe(response => { 
+    this._restauranteServicio.addRestaurante(this.restaurante).subscribe(
+      response => { 
         this.estatus = response.estatus
         if(this.estatus !== "success"){
           alert('error en el servidor');
@@ -39,5 +39,4 @@ export class AgregaRestauranteComponent implements OnInit {
     );
     this.router.navigate(["/"]);
   }
-
 }
