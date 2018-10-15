@@ -11,8 +11,8 @@ import {RestauranteServicio} from '../services/restaurantes.services';
 export class AgregaRestauranteComponent implements OnInit {
   public titulo = 'Crea un Restaurante';
   public restaurante: Restaurante;
-  public estatus;
-  public unerror;
+  public status: string;
+  public unerror: string;
   constructor(
     private _restauranteServicio : RestauranteServicio,
     private route : ActivatedRoute,
@@ -24,8 +24,9 @@ export class AgregaRestauranteComponent implements OnInit {
   onSubmit() {
     this._restauranteServicio.addRestaurante(this.restaurante).subscribe(
       response => { 
-        this.estatus = response.estatus
-        if(this.estatus !== "success"){
+        this.status = response.status;
+        this.restaurante = response.data;
+        if(this.status !== "success"){
           alert('error en el servidor');
         }
     },

@@ -20,12 +20,9 @@ export class RestauranteServicio {
 							.map(res => res.json());
 		}
     addRestaurante(restaurante: Restaurante) {
-      let json = JSON.stringify(restaurante);
-      let params = "json="+json;
-      let headers = new Headers({'Content-Type':'application/x-www-form-urlencoded'});
-
-      let options = new RequestOptions({headers:headers});
-      return this._http.post('http://localhost/phpMyAdmin/api-rest/restaurantes-api.php/restaurantes', 
-        params, {headers: headers}).map(res => res.json());
+    let json = JSON.stringify(restaurante);
+		let params = "json="+json;
+		let headers = new Headers({'Content-Type':'application/x-www-form-urlencoded'});
+		return this._http.post(this.URL_API, params, {headers: headers}).map(res => res.json());
     }
 }
