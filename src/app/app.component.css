@@ -18,6 +18,20 @@ header h2 {
   margin-top: 30px;
   padding-left: 20px;
 }
+.navbar {
+  display:flex;
+  overflow: hidden;
+}
+.navbar ul li {
+  
+}
+.navbar ul li:hover, :active :focus{
+  border-style: none;
+  background:  #283747;
+  color: #fff;
+  font-size: 17px;
+  border-radius: 5px;
+}
 .menu {
   margin-top: 0%;
 }

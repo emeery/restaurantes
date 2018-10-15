@@ -6,10 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./noencontrado.component.css']
 })
 export class NoEncontradoComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  constructor() {}
+  ngOnInit() {}
 }

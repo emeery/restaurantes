@@ -1,0 +1,12 @@
+.opcion {
+  background:#283747;
+  display: flex;
+  font-family: 'Roboto';
+  margin-bottom: 10px;
+  justify-content: space-evenly;
+  padding: 10px;
+  color: #fff; 
+}
+.opcion h3 {
+    color: salmon;
+}
