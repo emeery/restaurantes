@@ -15,9 +15,9 @@ export class RestauranteDetalleComponent implements OnInit {
 	public unerror;
   constructor(
     private _restauranteServicio : RestauranteServicio,
-    private route: ActivatedRoute ) {}
-
-  ngOnInit() {
+    private route: ActivatedRoute ) 
+	{}
+	ngOnInit() {
     this.getRestaurante();
   }
   getRestaurante(){

@@ -1,6 +1,6 @@
 <div class="opcion">
   <h3>{{titulo}}</h3>
-  <form #formaRestaurante="ngForm">
+  <form #formaRestaurante="ngForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label> Nombre </label>
       <input 
@@ -9,7 +9,10 @@
       #nombre="ngModel"
       name="nombre"
       [ngModel]="restaurante.nombre"
-      placeholder="Nombre.." >
+      placeholder="Nombre.."
+      minlength="5"
+      required
+      >
       <span *ngIf="!nombre.valid">El nombre es obligatorio</span>
     </div>
     <div class="form-group">
@@ -20,12 +23,39 @@
       #direccion="ngModel"
       name="direccion"
       [ngModel]="restaurante.direccion"
-      placeholder="Direccion.." >
-      <span *ngIf="!direccion.valid">El nombre es obligatorio</span>
+      placeholder="Direccion.." 
+      minlength="5"
+      required
+      >
+      <span *ngIf="!direccion.valid">La dirección es obligatorio</span>
+      <br>
     </div>
-
-
-
-
+    <div class="form-group">
+      <label> Descripción </label>
+      <textarea 
+      type="text" 
+      class="form-control" 
+      #direccion="ngModel"
+      name="direccion"
+      [ngModel]="restaurante.direccion"
+      placeholder="Direccion.." 
+      minlength="5"
+      required
+      ></textarea>
+      <span *ngIf="!direccion.valid">La dirección es obligatorio</span>
+      <br>
+    </div>
+    <p>
+        <select #precio name="precio">
+          <option value="bajo" [attr.selected]="restaurante.precio === 'bajo' ? 'selected' : null">Bajo</option>
+          <option value="normal" [attr.selected]="restaurante.precio === 'normal' ? 'selected' : null">Normal</option>
+          <option value="alto" [attr.selected]="restaurante.precio === 'alto' ? 'selected' : null">Alto</option>
+        </select>
+    </p>
+    <button
+      type="submit"
+      class="btn btn-outline-secondary"
+      [disabled]="!formaRestaurante.form.valid"
+      >add restaurante</button>
   </form>
 </div>
