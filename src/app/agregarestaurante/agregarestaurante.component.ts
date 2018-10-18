@@ -13,6 +13,7 @@ export class AgregaRestauranteComponent implements OnInit {
   public restaurante: Restaurante;
   public status: string;
   public unerror: string;
+  public data;
   constructor(
     private _restauranteServicio : RestauranteServicio,
     private route : ActivatedRoute,
@@ -21,23 +22,27 @@ export class AgregaRestauranteComponent implements OnInit {
   ngOnInit() {
     this.restaurante = new Restaurante(0,"","","","null","bajo");
   }
-  onSubmit() {
-    this._restauranteServicio.addRestaurante(this.restaurante).subscribe(
-      response => { 
-        this.status = response.status;
-        this.restaurante = response.data;
-        if(this.status !== "success"){
-          alert('error en el servidor');
-        }
-    },
-    error => {
-      this.unerror = <any>error;
-      if(this.unerror !== null) {
-        console.log(this.unerror);
-        alert('error en la peticion');
-      }
-    }
-    );
-    this.router.navigate(["/"]);
+  onSubmit(){
+		 this._restauranteServicio.addRestaurante(this.restaurante)
+     .subscribe( response => {
+          this.status = response.status;
+					if(this.status !== "success"){
+						alert("Error en el servidor");
+					}
+				},
+				error => {
+					this.unerror = <any>error;
+				
+					if(this.unerror !== null){
+						console.log(this.unerror);
+						alert("Error en la petición");
+					}
+				}
+			);
+
+			this.router.navigate(["/"]);
+	}
+  llamarPrecio(valor) {
+    this.restaurante.precio = valor;
   }
 }

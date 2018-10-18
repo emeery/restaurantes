@@ -10,6 +10,8 @@ import { RestauranteListaComponent } from './restaurantelista/restaurantelista.c
 import { RestauranteDetalleComponent } from './restaurantedetalle/restaurantedetalle.component';
 import { NoEncontradoComponent } from './noencontrado/noencontrado.component';
 import { AgregaRestauranteComponent } from './agregarestaurante/agregarestaurante.component';
+import { EditaRestauranteComponent } from './editarestaurante/editarestaurante.component';
+
 
 
 @NgModule({
@@ -18,7 +20,8 @@ import { AgregaRestauranteComponent } from './agregarestaurante/agregarestaurant
     RestauranteListaComponent,
     RestauranteDetalleComponent,
     NoEncontradoComponent,
-    AgregaRestauranteComponent
+    AgregaRestauranteComponent,
+    EditaRestauranteComponent
   ],
   imports: [
     BrowserModule,HttpModule, FormsModule, routing,
