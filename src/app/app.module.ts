@@ -6,11 +6,11 @@ import { Routes, RouterModule } from '@angular/router';
 
 import {routing} from './routes/app.routes';
 import { AppComponent } from './app.component';
-import { RestauranteListaComponent } from './restaurantelista/restaurantelista.component';
-import { RestauranteDetalleComponent } from './restaurantedetalle/restaurantedetalle.component';
-import { NoEncontradoComponent } from './noencontrado/noencontrado.component';
-import { AgregaRestauranteComponent } from './agregarestaurante/agregarestaurante.component';
-import { EditaRestauranteComponent } from './editarestaurante/editarestaurante.component';
+import { RestauranteListaComponent } from './components/restaurantelista/restaurantelista.component';
+import { RestauranteDetalleComponent } from './components/restaurantedetalle/restaurantedetalle.component';
+import { NoEncontradoComponent } from './components/noencontrado/noencontrado.component';
+import { AgregaRestauranteComponent } from './components/agregarestaurante/agregarestaurante.component';
+import { EditaRestauranteComponent } from './components/editarestaurante/editarestaurante.component';
 
 
 

@@ -1,5 +1,5 @@
 <div class="opcion">
-  <h4>{{untitulo}}</h4>
+  <h3>{{titulo}}</h3>
   <form #formaRestaurante="ngForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label> Nombre </label>
@@ -36,13 +36,13 @@
       type="text" 
       class="form-control" 
       #direccion="ngModel"
-      name="direccion"
+      name="descripcion"
       [(ngModel)]="restaurante.descripcion"
       placeholder="Direccion.." 
       minlength="5"
       required
       ></textarea>
-      <span *ngIf="!direccion.valid">La dirección es obligatoria</span>
+      <span *ngIf="!descripcion.valid">La descripcion es obligatoria</span>
       <br>
     </div>
     <p>

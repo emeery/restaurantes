@@ -1,5 +1,5 @@
 <div class="opcion">
-  <h3>{{titulo}}</h3>
+  <h4>{{untitulo}}</h4>
   <form #formaRestaurante="ngForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label> Nombre </label>
@@ -23,7 +23,7 @@
       #direccion="ngModel"
       name="direccion"
       [(ngModel)]="restaurante.direccion"
-      placeholder="Direccion.." 
+      placeholder="Dirección.." 
       minlength="5"
       required
       >
@@ -36,9 +36,9 @@
       type="text" 
       class="form-control" 
       #direccion="ngModel"
-      name="direccion"
+      name="descripcion"
       [(ngModel)]="restaurante.descripcion"
-      placeholder="Direccion.." 
+      placeholder="Descripción.." 
       minlength="5"
       required
       ></textarea>
@@ -56,6 +56,6 @@
       type="submit"
       class="btn btn-outline-secondary"
       [disabled]="!formaRestaurante.form.valid"
-      >add restaurante</button>
+      >editar restaurante</button>
   </form>
 </div>

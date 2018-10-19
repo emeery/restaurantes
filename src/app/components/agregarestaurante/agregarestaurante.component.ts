@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
-import {Restaurante} from '../model/restaurante';
-import {RestauranteServicio} from '../services/restaurantes.services';
+import {Restaurante} from '../../model/restaurante';
+import {RestauranteServicio} from "../../services/restaurantes.services";
 @Component({
   selector: 'app-agregarestaurante',
   templateUrl: './agregarestaurante.component.html',

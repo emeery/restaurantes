@@ -1,9 +1,9 @@
 import {Routes, RouterModule } from '@angular/router';
-import {RestauranteListaComponent } from '../restaurantelista/restaurantelista.component';
-import {RestauranteDetalleComponent } from '../restaurantedetalle/restaurantedetalle.component';
-import {AgregaRestauranteComponent } from '../agregarestaurante/agregarestaurante.component';
-import {EditaRestauranteComponent } from '../editarestaurante/editarestaurante.component';
-import {NoEncontradoComponent } from '../noencontrado/noencontrado.component';
+import {RestauranteListaComponent } from '../components/restaurantelista/restaurantelista.component';
+import {RestauranteDetalleComponent } from '../components/restaurantedetalle/restaurantedetalle.component';
+import {AgregaRestauranteComponent } from '../components/agregarestaurante/agregarestaurante.component';
+import {EditaRestauranteComponent } from '../components/editarestaurante/editarestaurante.component';
+import {NoEncontradoComponent } from '../components/noencontrado/noencontrado.component';
 const routes: Routes = [
   {
     path: '',
@@ -23,11 +23,7 @@ const routes: Routes = [
     component: AgregaRestauranteComponent,
   },
   {
-    path: 'edita-restaurante',
-    component: EditaRestauranteComponent,
-  },
-  {
-    path: 'edita-restaurante:/id',
+    path: 'edita-restaurante/:id',
     component: EditaRestauranteComponent,
   },
   {
