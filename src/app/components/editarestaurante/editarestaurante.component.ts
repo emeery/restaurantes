@@ -11,10 +11,10 @@ import {Router, ActivatedRoute, Params} from '@angular/router';
   providers: [RestauranteServicio]
 })
 export class EditaRestauranteComponent implements OnInit {
-  public untitulo = 'Edita el Restaurante';
-  public restaurante : Restaurante;
-  public status : string;
-  public unerror : string;
+  public untitulo= 'Edita el Restaurante';
+  public restaurante: Restaurante;
+  public unstatus: string;
+  public unerror: string;
   constructor(
     private _restauranteServicio : RestauranteServicio,
     private _route: ActivatedRoute,
@@ -25,12 +25,30 @@ export class EditaRestauranteComponent implements OnInit {
     this.restaurante = new Restaurante(0,"","","","null","bajo");
     this.getRestaurante();
   }
-  // onSubmit () {
-  //   this._route.params.forEach((params:Params) =>{
-  //     let id = params["id"];
-  //     this._restauranteServicio.
-  //   });
-  // }
+  onSubmit(){
+		this._route.params.forEach((params: Params) => {
+			 let id = params["id"];
+			 this._restauranteServicio.editRestaurante(id, this.restaurante)
+       .subscribe(
+					response => { 
+          this._router.navigate(["/"]);
+          if(this.unstatus !== "success") {
+            alert("error en el servidor");
+          } 
+        },
+					error => {
+						this.unerror = <any>error;
+						if(this.unerror !== null){
+							console.log(this.unerror);
+							alert("Error en la petición");
+						} 
+					}
+        
+				);
+		 });
+	
+		
+	}
   getRestaurante() {
     this._route.params.forEach((params:Params)=> {
       let id = params["id"];
@@ -38,8 +56,9 @@ export class EditaRestauranteComponent implements OnInit {
       .subscribe( 
         response => {
           this.restaurante = response.data;
-          this.status = response.status;
-          if(this.status !== "success") {
+          console.log(this.restaurante);
+          this.unstatus = response.status;
+          if(this.unstatus !== "success") {
             alert("error en el servidor")
           }
         },

@@ -32,7 +32,7 @@ export class RestauranteServicio {
 		  let params = "json="+json;  
 		  let headers = new Headers({'Content-Type':'application/x-www-form-urlencoded'});
       return this._http.post(
-        'http://localhost/phpMyAdmin/api-rest/restaurantes-api.php/restaurante/'+id,
+        'http://localhost/phpMyAdmin/api-rest/restaurantes-api.php/update-restaurante/'+id,
         params, {headers:headers})
         .map(res => {res.json()});
     }
