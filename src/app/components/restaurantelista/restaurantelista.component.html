@@ -8,20 +8,20 @@
           <h3> {{restaurante.nombre}} </h3>
         <div>
           <p> {{restaurante.direccion}}</p>
-          <button 
-            (click)="verDetalleRestaurante()" 
-            [routerLink]="['restaurante', restaurante.id]" 
+          <button
+            [routerLink]="['restaurante', restaurante.id]"
             type="button"
             class="btn btn-info"
           > ver </button>
-          <button 
-            type="button" 
+          <button
+            type="button"
             class="btn btn-light"
-            [routerLink]="['edita-restaurante', restaurante.id]" 
+            [routerLink]="['edita-restaurante', restaurante.id]"
           > editar </button>
-          <button 
-          type="button" 
-          class="btn btn-danger" 
+          <button
+          type="button"
+          class="btn btn-danger"
+          (click)="borrarRestaurante(restaurante.id)"
           > X </button>
         </div>
       </div>

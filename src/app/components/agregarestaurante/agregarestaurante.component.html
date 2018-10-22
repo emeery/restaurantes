@@ -3,9 +3,9 @@
   <form #formaRestaurante="ngForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label> Nombre </label>
-      <input 
-      type="text" 
-      class="form-control" 
+      <input
+      type="text"
+      class="form-control"
       #nombre="ngModel"
       name="nombre"
       [(ngModel)]="restaurante.nombre"
@@ -17,13 +17,13 @@
     </div>
     <div class="form-group">
       <label> Dirección </label>
-      <input 
-      type="text" 
-      class="form-control" 
+      <input
+      type="text"
+      class="form-control"
       #direccion="ngModel"
       name="direccion"
       [(ngModel)]="restaurante.direccion"
-      placeholder="Direccion.." 
+      placeholder="Direccion.."
       minlength="5"
       required
       >
@@ -32,13 +32,13 @@
     </div>
     <div class="form-group">
       <label> Descripción </label>
-      <textarea 
-      type="text" 
-      class="form-control" 
-      #direccion="ngModel"
+      <textarea
+      type="text"
+      class="form-control"
+      #descripcion="ngModel"
       name="descripcion"
       [(ngModel)]="restaurante.descripcion"
-      placeholder="Direccion.." 
+      placeholder="Direccion.."
       minlength="5"
       required
       ></textarea>

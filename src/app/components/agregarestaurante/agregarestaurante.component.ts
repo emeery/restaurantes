@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import {Restaurante} from '../../model/restaurante';
-import {RestauranteServicio} from "../../services/restaurantes.services";
+import {RestauranteServicio} from '../../services/restaurantes.services';
 @Component({
   selector: 'app-agregarestaurante',
   templateUrl: './agregarestaurante.component.html',
@@ -15,33 +15,31 @@ export class AgregaRestauranteComponent implements OnInit {
   public unerror: string;
   public data;
   constructor(
-    private _restauranteServicio : RestauranteServicio,
-    private route : ActivatedRoute,
-    private router : Router
+    private restauranteServicio: RestauranteServicio,
+    private route: ActivatedRoute,
+    private router: Router
   ) { }
   ngOnInit() {
-    this.restaurante = new Restaurante(0,"","","","null","bajo");
+    this.restaurante = new Restaurante(0, '', '', '', 'null', 'bajo');
   }
-  onSubmit(){
-		 this._restauranteServicio.addRestaurante(this.restaurante)
+  onSubmit() {
+    this.restauranteServicio.addRestaurante(this.restaurante)
      .subscribe( response => {
+          this.router.navigate(['/']);
           this.status = response.status;
-					if(this.status !== "success"){
-						alert("Error en el servidor");
-					}
-				},
-				error => {
-					this.unerror = <any>error;
-				
-					if(this.unerror !== null){
-						console.log(this.unerror);
-						alert("Error en la petición");
-					}
-				}
-			);
-
-			this.router.navigate(["/"]);
-	}
+          if (this.status !== 'success') {
+            alert('Error en el servidor');
+          }
+        },
+        error => {
+          this.unerror = <any>error;
+          if (this.unerror !== null) {
+            console.log(this.unerror);
+            alert('Error en la petición');
+          }
+        }
+      );
+  }
   llamarPrecio(valor) {
     this.restaurante.precio = valor;
   }
