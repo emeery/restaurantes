@@ -14,10 +14,16 @@ export class RestauranteServicio {
       return this._http.get(this.URL_API)
       .map(res => res.json());
     }
-    getRestaurante(id: string) {
-      return this._http.get(
-        'http://localhost/phpMyAdmin/api-rest/restaurantes-api.php/restaurante/' + id)
-          .map(res => res.json());
+    getRestaurante(id: string, random = null) {
+      if (random === null) {
+        return this._http.get(
+          'http://localhost/phpMyAdmin/api-rest/restaurantes-api.php/restaurante/' + id)
+            .map(res => res.json());
+      } else {
+        return this._http.get(
+          'http://localhost/phpMyAdmin/api-rest/restaurantes-api.php/random-restaurante' )
+            .map(res => res.json());
+      }
     }
     addRestaurante(restaurante: Restaurante) {
       const json = JSON.stringify(restaurante);

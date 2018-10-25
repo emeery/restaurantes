@@ -23,7 +23,8 @@ export class RestauranteDetalleComponent implements OnInit {
   getRestaurante() {
     this.route.params.forEach((params: Params) => {
       const id = params['id'];
-      this._restauranteServicio.getRestaurante(id)
+      const aleatorio = params['random'];
+      this._restauranteServicio.getRestaurante(id, aleatorio)
       .subscribe( response => {
         this.restaurante = response.data;
         console.log(this.restaurante);

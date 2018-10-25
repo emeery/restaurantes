@@ -27,11 +27,15 @@ const routes: Routes = [
     component: EditaRestauranteComponent,
   },
   {
+    path: 'donde-comemos/:random',
+    component: RestauranteDetalleComponent,
+  },
+  {
     path: '404',
     component: NoEncontradoComponent,
   },
   {
-    path: '**', 
+    path: '**',
     redirectTo: '404'
   }
 ];
