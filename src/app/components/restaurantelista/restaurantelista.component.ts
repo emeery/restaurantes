@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import {Restaurante} from '../../model/restaurante';
 import {RestauranteServicio} from '../../services/restaurantes.services';
 import {Router} from '@angular/router';
+import {Subscription} from 'rxjs/Subscription';
+import 'rxjs/add/observable/timer';
+import { Observable } from 'rxjs/Observable';
 @Component({
   selector: 'app-restaurantelista',
   templateUrl: './restaurantelista.component.html',
@@ -13,7 +16,9 @@ export class RestauranteListaComponent implements OnInit {
   public restaurantes: Restaurante;
   public unerror: string;
   public unstatus: string;
-  public cargando;
+  // public cargando: boolean = false;
+  // public subscripcion: Subscription;
+  // public timer: Observable<any>;
   constructor(
     private restauranteServicio: RestauranteServicio,
     private router: Router,
@@ -22,11 +27,25 @@ export class RestauranteListaComponent implements OnInit {
   ngOnInit() {
     this.getRestaurantes();
   }
+  // ngOnDestroy() {
+  //   if ( this.subscripcion && this.subscripcion instanceof Subscription) {
+  //     this.subscripcion.unsubscribe();
+  //   }
+  // }
+  // setRetardo() {
+  //   this.cargando = true;
+  //   this.timer = Observable.timer(2000);
+  //   this.subscripcion = this.timer.subscribe(() => {
+  //     this.cargando = false;
+  //   });
+  // }
   getRestaurantes() {
+
     this.restauranteServicio.getRestaurantes()
     .subscribe( resultado => {
         this.restaurantes = resultado.data;
         this.unstatus = resultado.status;
+
         if (this.unstatus !== 'success') {
           alert('error en el servidor');
         }

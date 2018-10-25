@@ -5,7 +5,7 @@
   margin-bottom: 10px;
   justify-content: space-evenly;
   padding: 10px;
-  color: #fff; 
+  color: #fff;
 }
 .boton {
   position: relative;
@@ -19,7 +19,9 @@
   background: lightsalmon;
 }
 .imagen img {
-  width: 90%;
+  width: 110%;
+  height: 100%;
+  background-size: cover no-repeat;
 }
 .descripcion {
   display: block;

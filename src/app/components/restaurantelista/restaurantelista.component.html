@@ -1,9 +1,15 @@
 
   <div id="app-restaurantelista">
+    <li *ngIf="cargando" class="cargandose">
+        <img
+        src="../../assets/images/point.gif">
+    </li>
     <div *ngFor="let restaurante of restaurantes">
       <div class="opcion bxshadow">
         <div class="imagen">
-          <img src="../../assets/images/point.gif" />
+          <img
+          src="http://localhost/phpMyAdmin/api-rest/uploads/{{restaurante.imagen}}"
+          *ngIf="restaurante.imagen && restaurante.imagen !== 'null'"/>
         </div>
           <h3> {{restaurante.nombre}} </h3>
         <div>

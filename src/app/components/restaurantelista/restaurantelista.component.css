@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-
+.cargandose {
+  list-style-type: none;
+  text-decoration: none;
+  text-align: center;
+  background: lightgray;
+}
 .opcion {
   border-radius: 5px;
   background: teal;
   display: flex;
   font-family: 'Roboto';
-  
+
   justify-content: space-between;
   padding: 10px;
   margin: 2px;
@@ -19,7 +24,9 @@
   background: lightsalmon;
 }
 .imagen img {
-  width: 90%;
+  width: 100%;
+  height: 100%;
+  background-size: cover no-repeat;
 }
 .opcion p {
   color: #ecf0f1;

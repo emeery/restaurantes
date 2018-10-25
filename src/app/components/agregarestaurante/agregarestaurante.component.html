@@ -1,5 +1,5 @@
 <div class="opcion">
-  <h3>{{titulo}}</h3>
+
   <form #formaRestaurante="ngForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label> Nombre </label>
@@ -52,6 +52,11 @@
           <option value="alto" [attr.selected]="restaurante.precio === 'alto' ? 'selected' : null">Alto</option>
         </select>
     </p>
+    <label>Imagen</label><br>
+    <input
+    type="file"
+    (change)="archivoCambioEvent($event)"
+    placeholder="subir imagen..">
     <button
       type="submit"
       class="btn btn-outline-secondary"

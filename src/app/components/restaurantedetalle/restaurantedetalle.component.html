@@ -1,31 +1,33 @@
-<div *ngIf="restaurante" class="opcion boxshadow">  
-  <div routerLink="/" class="boton">
-    <i class="fas fa-angle-left fa-5x"></i>
-  </div>    
-  <div class="imagen">
-  <img src="../../assets/images/point.gif" />
-  </div>
-  <div class="descripcion">
-    <h3> {{restaurante.nombre}}</h3>
-    <p> 
-        Descripcion: {{restaurante.descripcion}}
-          <br>
-        Direccion: {{restaurante.direccion}}
-    </p>
-    <div [ngSwitch]="restaurante.precio">
-      <p *ngSwitchCase="'bajo'"> precio accesible -
-        <i class="fas fa-dollar-sign fa-2x"></i>
+<div *ngIf="restaurante" class="opcion boxshadow">
+    <div routerLink="/" class="boton">
+      <i class="fas fa-angle-left fa-5x"></i>
+    </div>
+    <div class="imagen">
+    <img
+    src="http://localhost/phpMyAdmin/api-rest/uploads/{{restaurante.imagen}}"
+    />
+    </div>
+    <div class="descripcion">
+      <h3> {{restaurante.nombre}}</h3>
+      <p>
+          Descripcion: {{restaurante.descripcion}}
+            <br>
+          Direccion: {{restaurante.direccion}}
       </p>
-      <p *ngSwitchCase="'regular'"> precio regular -
-        <i class="fas fa-dollar-sign fa-2x"></i>
-        <i class="fas fa-dollar-sign fa-2x"></i>
-      </p>
-      <p *ngSwitchCase="'alto'"> precio alto -
-        <i class="fas fa-dollar-sign fa-2x"></i>
-        <i class="fas fa-dollar-sign fa-2x"></i>
-        <i class="fas fa-dollar-sign fa-2x"></i>
-      </p>
+      <div [ngSwitch]="restaurante.precio">
+        <p *ngSwitchCase="'bajo'"> precio accesible -
+          <i class="fas fa-dollar-sign fa-2x"></i>
+        </p>
+        <p *ngSwitchCase="'regular'"> precio regular -
+          <i class="fas fa-dollar-sign fa-2x"></i>
+          <i class="fas fa-dollar-sign fa-2x"></i>
+        </p>
+        <p *ngSwitchCase="'alto'"> precio alto -
+          <i class="fas fa-dollar-sign fa-2x"></i>
+          <i class="fas fa-dollar-sign fa-2x"></i>
+          <i class="fas fa-dollar-sign fa-2x"></i>
+        </p>
+      <div>
+
     <div>
-    
-  <div>
-</div>
+  </div>
